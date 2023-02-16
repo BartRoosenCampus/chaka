@@ -1,7 +1,6 @@
 "use strict";
 
 import {Game} from "./Game.js";
-import {form} from "./dom.js";
 import {page} from "./dom.js";
 
 document.body.addEventListener('click', (event) => {
@@ -10,34 +9,34 @@ document.body.addEventListener('click', (event) => {
     }
 });
 
-form.inputName.addEventListener('keyup', () => {
-    if ('' !== form.inputName.value && 0 < form.selectLevel.value) {
-        form.buttonAddPlayer.removeAttribute('disabled');
-        if (game.players.length !== 0) form.startGameButton.removeAttribute('disabled');
+page.form.inputName.addEventListener('keyup', () => {
+    if ('' !== page.form.inputName.value && 0 < page.form.selectLevel.value) {
+        page.form.buttonAddPlayer.removeAttribute('disabled');
+        if (game.players.length !== 0) page.form.startGameButton.removeAttribute('disabled');
     } else {
-        form.buttonAddPlayer.setAttribute('disabled', 'disabled');
-        if (game.players.length === 0) form.startGameButton.setAttribute('disabled', 'disabled');
+        page.form.buttonAddPlayer.setAttribute('disabled', 'disabled');
+        if (game.players.length === 0) page.form.startGameButton.setAttribute('disabled', 'disabled');
     }
 });
 
-form.buttonAddPlayer.addEventListener('click', () => {
+page.form.buttonAddPlayer.addEventListener('click', () => {
     game.addPlayer();
-    if (game.players.length !== 0) form.startGameButton.removeAttribute('disabled');
+    if (game.players.length !== 0) page.form.startGameButton.removeAttribute('disabled');
 });
 
-form.startGameButton.addEventListener('click', () => {
+page.form.startGameButton.addEventListener('click', () => {
     game.start();
 });
 
-form.resetGameButton.addEventListener('click', () => {
+page.form.resetGameButton.addEventListener('click', () => {
     game.newGame();
 });
 
-form.clearGameButton.addEventListener('click', () => {
+page.form.clearGameButton.addEventListener('click', () => {
     window.location.href = './';
 });
 
-form.pointsSlider.addEventListener('input', () => {
+page.form.pointsSlider.addEventListener('input', () => {
     game.setPoints();
 });
 
@@ -71,4 +70,4 @@ page.gameForm.singleFinish.addEventListener('click', () => {
     game.processThrow('single');
 });
 
-const game = new Game(form, page);
+const game = new Game(page);

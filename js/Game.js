@@ -10,8 +10,8 @@ export class Game {
     page = null;
     form = null;
 
-    constructor(form, page) {
-        this.form = form;
+    constructor(page) {
+        this.form = page.form;
         this.form.pointsSlider.value = this.form.pointsDisplay.value = this.points;
         this.page = page;
         this.page.gameFormArea.style.display = 'none';
