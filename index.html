@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <script type="module" src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Chaka</title>
+</head>
+<body>
+<header>
+    Chaka
+</header>
+<div class="content">
+    <section id="gameButtonsArea">
+        <button type="button" id="startGameButton" disabled="disabled">Start game</button>
+        <button type="button" id="resetGameButton" disabled="disabled">New game</button>
+        <button type="button" id="clearGameButton" disabled="disabled">Reset game</button>
+        <input type="range" id="pointsSlider" min="101" max="180">
+        <input type="text" id="pointsDisplay" disabled="disabled">
+    </section>
+    <section id="addPlayersFormArea">
+        <input type="text" name="name" placeholder="Name" id="playersName" autocomplete="off">
+        <select name="level" id="playersLevel">
+            <option value="1">Beginner</option>
+            <option value="2">Advanced</option>
+            <option value="3">Pro</option>
+        </select>
+        <button type="button" id="addPlayerButton" disabled="disabled">Add player</button>
+    </section>
+    <section class="list">
+        <div id="playersList"></div>
+    </section>
+    <section id="gameFormArea">
+        <div class="gameFormDiv">
+            <input type="text" id="throw">
+        </div>
+        <div class="gameFormDiv">
+            <button class="finish" type="button" id="bullsEyeFinish">Bull's eye Finish</button>
+            <button class="finish" type="button" id="singleBullFinish">Single bull Finish</button>
+            <button class="finish" type="button" id="doubleFinish">Double Finish</button>
+            <button class="finish" type="button" id="tripleFinish">Triple Finish</button>
+            <button class="finish" type="button" id="singleFinish">Singels Finish</button>
+        </div>
+        <div class="gameFormDiv">
+            <button class="finish" type="button" id="busted">Busted</button>
+        </div>
+    </section>
+</div>
+</body>
+</html>

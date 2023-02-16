@@ -1,0 +1,88 @@
+@font-face {
+    font-family: roboto;
+    src: url("roboto/Roboto-Thin.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: roboto, sans-serif;
+    background-color: whitesmoke;
+}
+
+header {
+    background-color: orange;
+    color: whitesmoke;
+    font-size: 3em;
+    padding: .5em 1em;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid orange;
+    padding: .5em;
+}
+
+.table-header {
+    background-color: orange;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.content {
+    width: 70%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0 1em;
+}
+
+section {
+    padding: .5em 0;
+}
+
+table {
+    width: 100%;
+}
+
+.activePlayer {
+    font-weight: bold;
+    background-color: yellow;
+}
+
+button {
+    border: none;
+    padding: .4em;
+    background-color: orange;
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+button:disabled {
+    background-color: #dac49c;
+}
+
+input, select {
+    padding: .3em;
+}
+
+.gameFormDiv {
+    padding: .5em 0;
+}
+
+.gameFormDiv > button {
+    font-size: 1.5em;
+    margin-top: .3em
+}
+
+#throw {
+    font-size: 3em;
+    text-align: center;
+}
