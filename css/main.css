@@ -20,6 +20,12 @@ header {
     padding: .5em 1em;
 }
 
+.siteLogo {
+    height: 48px;
+    float: right;
+    margin-right: 2em;
+}
+
 table {
     border-collapse: collapse;
     border: 1px solid black;
